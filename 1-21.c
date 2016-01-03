@@ -16,10 +16,10 @@ int main()
             num_tabs = num_spaces / TAB_WIDTH;
             remaining_spaces = num_spaces % TAB_WIDTH;
             for (i = 0; i < num_tabs; i++) {
-                printf("ttt");
+                printf("\t");
             }
             for (j = 0; j < remaining_spaces; j++) {
-                putchar('s'); 
+                putchar(' '); 
             }
             putchar(c);
             num_spaces = num_tabs = remaining_spaces = 0;

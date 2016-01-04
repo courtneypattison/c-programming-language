@@ -26,14 +26,16 @@ int main()
             continue;
         }
 
-        if (in_comment == FALSE) {
-            putchar(c);
-        } else if (in_comment == END) {
+        if ((in_comment == FALSE) && (prev_c != '\0')) {
+            putchar(prev_c);
+        } 
+        if (in_comment == END) {
             in_comment = FALSE;
         }
 
         prev_c = c;
     }   
+    printf("%c\n", prev_c);
 
     return 0;
 }

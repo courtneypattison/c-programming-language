@@ -7,7 +7,7 @@ void rm0x(char s[], int s_len);
 
 int main()
 {
-    char s[6] = "0X4F"; /* sample string of hexadecimal digits */
+    char s[6] = "4F"; /* sample string of hexadecimal digits */
 
     printf("decimal: %d\n", htoi(s));
 
@@ -62,8 +62,8 @@ void rm0x(char s[], int s_len)
             s[i] = s[j];
             i++;     
         }
+        s[i] = '\0';
     }
-    s[i] = '\0';
 
     return;
 }
